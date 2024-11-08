@@ -1,0 +1,44 @@
+type: object
+required:
+  - _id
+  - name
+  - gender
+  - email
+  - age
+  - teacherId
+properties:
+  _id:
+    description: "Student's id"
+    type: string
+    example: '672e559aefd1ec206c1b77a8'
+  name:
+    description: "Student's name"
+    type: string
+    example: 'John Doe'
+  gender:
+    description: "Student's gender"
+    type: string
+    enum: ['male', 'female']
+    example: male
+  email:
+    description: "Student's email"
+    type: string
+    example: 'johndoe@gmail.com'
+  age:
+    description: "Student's age"
+    type: integer
+    example: 26
+  onDuty:
+    description: 'Whether is student on duty'
+    type: boolean
+    example: false
+    default: false
+  teacherId:
+    description: "Student's teacher id"
+    type: string
+    example: 66a92312c1de214c68f17d10
+  avatar:
+    description: "Student's avatar"
+    type: string
+    example: https://res.cloudinary.com/dha4xvgfi/image/upload/v1724438545/g3n05nth0sgqzyakh0dm.jpg
+    default: null

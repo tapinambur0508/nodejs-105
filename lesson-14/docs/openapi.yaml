@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: University
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description: This is a documentation of university app
+tags:
+  - name: Students
+    description: Operations about students.
+  - name: Auth
+    description: Auth operations.
+servers:
+  - url: http://127.0.0.1:8080
+paths:
+  /students/{id}:
+    get:
+      $ref: ../swagger/paths/students/{id}/get.yaml
+  /students:
+    post:
+      $ref: ../swagger/paths/students/post.yaml
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
